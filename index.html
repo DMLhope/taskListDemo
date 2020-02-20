@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task list</title>
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <!-- container 类的宽度被设置为窗口的70%左右。
+    它使你的页面内容居中并包含在内。我们用container类来包含我们的body内容。 -->
+    <div class="container">
+        <!-- 网格系统 -->
+        <div class="row">
+            <!-- 12列 -->
+            <div class="col s12">
+                <!-- id是之后给js用的，card是标签 -->
+                <div id="main" class="card">
+                    <!-- 卡片里包含 -->
+                    <div class="card-content">
+                        <!-- 卡片的标题 -->
+                        <span class="card-title">Task List</span>
+                        <!-- 分网格 -->
+                        <div class="row">
+                            <!-- 表单 -->
+                            <form id="task-form">
+                                <!-- 你要设置一个使用.input-field的div包裹着input和label标签。这两个标签能帮助JQuery对其应用动画效果。 
+                                另外，动画效果只会应用在Input和Textarea表单元素中。 -->
+                                <div class="input-field col s12">
+                                    <input type="text" name="task" id="task">
+                                    <label for="task">New Task</label>
+
+                                </div>
+                                <!-- submit提交   -->
+                                <div class="col s12">
+                                    <input type="submit" value="Add Task" class="btn-large">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <h5 id="task-title">Tasks</h5>
+                        <div class="input-field col s12">
+                            <input type="text" name="filter" id="filter">
+                            <label for="filter">Filter Tasks</label>
+                        </div>
+                        <ul class="collection"></ul>
+                        <a href="#" class="clear-tasks btn black">Clear Tasks</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
